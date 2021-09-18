@@ -55,7 +55,7 @@ function getCicleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-    
+  
       throw new Error('Not implemented');
 }
 
@@ -255,7 +255,7 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-    parseInt(value);
+    
     throw new Error('Not implemented');
 }
 

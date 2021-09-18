@@ -297,69 +297,78 @@ function isString(value) {
 function getCardId(value) {
     
 
-    // if(value[1]==="♣")
-    // {
-    //     if(value[0]==='A')
-    //     var x=0;
-    //     else if(value[0]=='J')
-    //     var x=10;
-    //     else if(value[0]=='Q')
-    //     var x=11;
-    //     else if(value[0]=='K')
-    //     var x=12;
-    //     else
-    //     var x = parseInt(value[0]) -1;
-       
+    if(value[1]=="♣" || value[2]=="♣")
+    {
       
-    //    return x;
-    // }
-    // else if(value[1]==='♦')
-    // {
-    //     if(value[0]=='A')
-    //     var x=0;
-    //     else if(value[0]=='J')
-    //     var x=10;
-    //     else if(value[0]=='Q')
-    //     var x=11;
-    //     else if(value[0]=='K')
-    //     var x=12;
-    //     else
-    //     var x = parseInt(value[0])-1;
+        if(value[0]=='A')
+      var   x=0;
+        else if(value[0]==='J')
+       var  x=10;
+        else if(value[0]==='Q')
+       var   x=11;
+        else if(value[0]==='K')
+        var  x=12;
+       else if(value[2]=="♣")
+       var x = 9
+       else
+       var x = Number(value[0])-1;
+      
+       return x;
+    }
+   if(value[1]=='♦'  || value[2]=='♦' )
+    {
+        if(value[0]=='A')
+        var x=0;
+        else if(value[0]=='J')
+        var x=10;
+        else if(value[0]=='Q')
+        var x=11;
+        else if(value[0]=='K')
+        var x=12;
+        else if(value[2]=='♦')
+       var x = 9
+       else
+       var x = Number(value[0])-1;
 
-    //     return x + 12;
-    // }
-    // else if(value[1]==='♥')
-    // {
-    //     if(value[0]=='A')
-    //     var x=0;
-    //     else if(value[0]=='J')
-    //     var x=10;
-    //     else if(value[0]=='Q')
-    //     var x=11;
-    //     else if(value[0]=='K')
-    //     var x=12;
-    //     else
-    //     var x = parseInt(value[0])-1;
+        return x + 13;
+    }
+    else if(value[1]=="♥" || value[2]=="♥")
+    {
+        if(value[0]=="A")
+        var x=0;
+        else if(value[0]=="J")
+        var x=10;
+        else if(value[0]=="Q")
+        var x=11;
+        else if(value[0]=="K")
+        var x=12;
+        else if(value[2]=="♥")
+       var x = 9
+       else
+       var x = Number(value[0])-1;
 
-    //     return x + 25;
-    // }
-    // else if(value[1]==='♠')
-    // {   
-    //     if(value[0]=='A')
-    //     var x=0;
-    //     else if(value[0]=='J')
-    //     var x=10;
-    //     else if(value[0]=='Q')
-    //     var x=11;
-    //     else if(value[0]=='K')
-    //     var x=12;
-    //     else
-    //     var x = parseInt(value[0])-1;
 
-    //     return x + 38;
-    // }
-    throw new Error('Not implemented');
-}
+        return x + 26;
+    }
+    else if(value[1]==='♠' || value[2]==='♠')
+    {   
+        if(value[0]=='A')
+        var x=0;
+        else if(value[0]=='J')
+        var x=10;
+        else if(value[0]=='Q')
+        var x=11;
+        else if(value[0]=='K')
+        var x=12;
+        else if(value[2]==='♠')
+       var x = 9
+       else
+       var x = Number(value[0])-1;
+
+        return x + 39;
+    }
+   
+ }
 
 
 module.exports = {
